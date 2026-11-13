@@ -1,0 +1,79 @@
+
+<template>
+  <div class="typing-indicator">
+
+    <img
+      src="/pensando.gif"
+      alt="Robô pensando"
+      class="robot-icon"
+    />
+
+    <div class="message">
+      <strong>Assistente Virtual</strong>
+
+      <p>Estou preparando sua resposta...</p>
+
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+  </div>
+</template>
+
+<style scoped>
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #f4f0ff;
+  border-radius: 15px;
+  width: fit-content;
+}
+
+.robot-icon {
+  width: 85px;
+  height: 85px;
+  object-fit: contain;
+}
+
+.message strong {
+  color: #7558e8;
+}
+
+.message p {
+  font-size: 13px;
+  color: #666;
+}
+
+.dots {
+  display: flex;
+  gap: 5px;
+}
+
+.dots span {
+  width: 8px;
+  height: 8px;
+  background: #7558e8;
+  border-radius: 50%;
+  animation: piscar 1s infinite;
+}
+
+.dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes piscar {
+  50% {
+    opacity: 0.3;
+    transform: translateY(-5px);
+  }
+}
+</style>
